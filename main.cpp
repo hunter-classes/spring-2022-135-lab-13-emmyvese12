@@ -77,6 +77,7 @@ int main(){
 
     delete[] arr;
 
+
     //task D
     std::cout << "\n--------Task D--------" << std::endl;
     bool result1 = isAlphanumeric("ABCD");
@@ -94,6 +95,21 @@ int main(){
     std::cout << result3 << " == false" << "\n";
     
 
+    //task E
+    std::cout << "\n--------Task E--------" << std::endl;
+    bool checkParen1 = nestedParens("((()))");
+    std::cout << "Is '((()))' a sequence of nested parentheses?: ";
+    std::cout << checkParen1 << " == true" << "\n";
+    std::cout << "\n";
 
+    bool checkParen2 = nestedParens("(((");
+    std::cout << "Is '(((' a sequence of nested parantheses?: ";
+    std::cout << checkParen2 << " == false" << "\n";
+    std::cout << "\n";
+
+    bool checkParen3 = nestedParens("(((()))))");
+    std::cout << "Is '(((()))))' a sequence of nested parantheses?: ";
+    std::cout << checkParen3 << " == false" << "\n";
+    
 
 }
