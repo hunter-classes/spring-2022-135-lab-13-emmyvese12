@@ -51,3 +51,18 @@ TEST_CASE("Checks if a String is Alphanumeric"){
     CHECK(isAlphanumeric("+flowers") == 0);
     CHECK(isAlphanumeric("moreFlowers+") == 0);
 }
+
+//task E
+TEST_CASE("Checks if a String is a Sequence of Nested Parantheses"){
+    CHECK(nestedParens("(())") == 1);
+    CHECK(nestedParens("") == 1);
+    CHECK(nestedParens(")(") == 0);
+    CHECK(nestedParens("(()") == 0);
+    CHECK(nestedParens("a(b)c") == 0);
+    CHECK(nestedParens("(") == 0);
+    CHECK(nestedParens("()()") == 0);
+    CHECK(nestedParens("(((())))") == 1);
+    CHECK(nestedParens("{}") == 0);
+    CHECK(nestedParens("(hello)") == 0);
+    CHECK(nestedParens("(((((())))))") == 1);
+}
