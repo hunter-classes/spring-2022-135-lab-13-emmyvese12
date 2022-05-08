@@ -10,7 +10,7 @@ Recursion
 
 int main(){
     //task A
-    std::cout << ""--------Task A--------" << std::endl;
+    std::cout << "--------Task A--------" << std::endl;
     std::cout << "Print [-2,10]: ";
     std::string output1 = printRange(-2,10);
     std::cout << output1 << "\n";
