@@ -5,6 +5,7 @@ Recursion
 */
 
 #include <iostream>
+#include <cctype>
 #include "funcs.h"
 
 int main(){
@@ -75,6 +76,23 @@ int main(){
     std::cout << sum3 << "\n";
 
     delete[] arr;
+
+    //task D
+    std::cout << "\n--------Task D--------" << std::endl;
+    bool result1 = isAlphanumeric("ABCD");
+    std::cout << "Is 'ABCD' alphanumeric?: ";
+    std::cout << result1 << " == true" <<"\n";
+    std::cout << "\n";
+
+    bool result2 = isAlphanumeric("hello123hello123");
+    std::cout << "Is 'hello123hello123' alphanumeric?: ";
+    std::cout << result2 << " == true" << "\n";
+    std::cout << "\n";
+
+    bool result3 = isAlphanumeric("ABC1-2-3");
+    std::cout << "Is 'ABC1-2-3' alphanumeric?: ";
+    std::cout << result3 << " == false" << "\n";
+    
 
 
 
