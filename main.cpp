@@ -10,7 +10,7 @@ Recursion
 
 int main(){
     //task A
-    std::cout << "--------Task A--------" << std::endl;
+    std::cout << ""--------Task A--------" << std::endl;
     std::cout << "Print [-2,10]: ";
     std::string output1 = printRange(-2,10);
     std::cout << output1 << "\n";
@@ -27,7 +27,7 @@ int main(){
 
 
     //task B
-    std::cout << "\n-------Task B--------" << std::endl;
+    std::cout << "\n--------Task B--------" << std::endl;
     std::cout << "Print the sum of [1,3]: ";
     int x = sumRange(1,3);
     std::cout << x << "\n";
