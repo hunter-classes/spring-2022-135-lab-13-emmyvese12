@@ -1,7 +1,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <iostream>
+#include <cctype>
 #include "funcs.h"
 #include "doctest.h"
-#include <iostream>
 
 
 //task A
@@ -39,3 +40,14 @@ TEST_CASE("Print the Sum of Elements in an Array"){
     CHECK(sumArray(arr,0) == 0);
 }
 
+//task D
+TEST_CASE("Checks if a String is Alphanumeric"){
+    CHECK(isAlphanumeric("ABCD") == 1);
+    CHECK(isAlphanumeric("Abcd1234xyz") == 1);
+    CHECK(isAlphanumeric("KLMN 8-7-6") == 0);
+    CHECK(isAlphanumeric("") == 1);
+    CHECK(isAlphanumeric("e") == 1);
+    CHECK(isAlphanumeric("***star***") == 0);
+    CHECK(isAlphanumeric("+flowers") == 0);
+    CHECK(isAlphanumeric("moreFlowers+") == 0);
+}
