@@ -71,3 +71,30 @@ bool isAlphanumeric(std::string s){
     
 
 }
+
+//task E
+bool nestedParens(std::string s){
+    //returns true if the string is a sequence of nested parentheses ex: () (()) ((()))
+    //any other symbols or mismatching parenthesis should make the function return false
+    if (s.size() == 0){
+        return true;
+    }
+
+    if (s[s.size() - 1] != ')' || s[0] != '('){ //other symbols and start can't be ) or end (
+        return false;
+    }
+
+    else if (s[0] == s[s.size() - 1]){ //mismatching parans
+        return false;
+    }
+    
+    else if (s.size() == 2){ //once the string is () and it went through the above checks 
+                            //and the first element is not the same as the 2nd element, we can return true since they are nested
+        return true;
+    }
+    
+    else {
+        return nestedParens(s.substr(0 + 1, s.size() - 2)); // ex: (()) -> () or ((())) -> (()) reduces to the next potential nested parans
+    }
+
+}
